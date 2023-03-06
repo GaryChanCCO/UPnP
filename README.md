@@ -1,1 +1,2 @@
-A simple Powershell Module for Adding/Removing UPnP Mapping of router
+Currently only support Windows
+Tested in Windows 10 and Windows 11 with Powershell 7.3.3
