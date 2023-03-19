@@ -12,7 +12,7 @@ function Add-UPnPMapping {
 
   Add-Type -Path $Dll
   $nat = New-Object NATUPNPLib.UPnPNATClass
-  $nat.StaticPortMappingCollection.Add($Port, $Protocol, $InternalPort, $InternalClientIp, $true, $Description)
+  $nat.StaticPortMappingCollection.Add($ExternalPort, $Protocol, $InternalPort, $InternalClientIp, $true, $Description)
 }
 
 function Remove-UPnPMapping {
@@ -24,7 +24,7 @@ function Remove-UPnPMapping {
 
   Add-Type -Path $Dll
   $nat = New-Object NATUPNPLib.UPnPNATClass
-  $nat.StaticPortMappingCollection.Remove($Port, $Protocol)
+  $nat.StaticPortMappingCollection.Remove($ExternalPort, $Protocol)
 }
 
 Export-ModuleMember -Function * -Alias *
